@@ -1,15 +1,23 @@
-export function ExperienceBar() {
+interface ExperienceBarProps {
+  minXp: number;
+  maxXp: number;
+  currentXp: number;
+}
+
+export function ExperienceBar({ minXp, maxXp, currentXp }: ExperienceBarProps) {
+  const xpProportionPercentage = ((currentXp - minXp)/(maxXp - minXp)) * 100
+
   return (
     <header className="experience-bar">
-      <span>0 xp</span>
+      <span>{minXp} xp</span>
       <div>
-        <div style={{ width: '60%' }}>
-          <span className="current-experience" style={{ left: '60%' }}>
-            360xp
+        <div style={{ width: `${xpProportionPercentage}%` }}>
+          <span className="current-experience" style={{ left: `${xpProportionPercentage}%` }}>
+            {currentXp} xp
           </span>
         </div>
       </div>
-      <span>600 xp</span>
+      <span>{maxXp} xp</span>
     </header>
   );
 }

@@ -1,3 +1,5 @@
+import styles from '../styles/components/ExperienceBar.module.css'
+
 interface ExperienceBarProps {
   minXp: number;
   maxXp: number;
@@ -8,11 +10,11 @@ export function ExperienceBar({ minXp, maxXp, currentXp }: ExperienceBarProps) {
   const xpProportionPercentage = ((currentXp - minXp)/(maxXp - minXp)) * 100
 
   return (
-    <header className="experience-bar">
+    <header className={styles.experienceBar}>
       <span>{minXp} xp</span>
       <div>
         <div style={{ width: `${xpProportionPercentage}%` }}>
-          <span className="current-experience" style={{ left: `${xpProportionPercentage}%` }}>
+          <span className={styles.currentExperience} style={{ left: `${xpProportionPercentage}%` }}>
             {currentXp} xp
           </span>
         </div>

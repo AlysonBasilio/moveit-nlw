@@ -1,8 +1,11 @@
+import { ExperienceBar } from './component/ExperienceBar';
 import './styles/global.css'
 
 function App() {
   return (
-    <h1>Hello NLW</h1>
+    <div className="container">
+      <ExperienceBar minXp={0} maxXp={600} currentXp={500} />
+    </div>
   );
 }
 

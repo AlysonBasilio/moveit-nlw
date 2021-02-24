@@ -1,8 +1,12 @@
 import { useState, useEffect } from 'react'
 import styles from '../styles/components/Countdown.module.css'
 
-export function Countdown() {
-  const [timeInSeconds, setTimeInSeconds] = useState(60 * 25)
+interface CountdownProps {
+  initialTimeInSeconds: number;
+}
+
+export function Countdown({ initialTimeInSeconds }: CountdownProps) {
+  const [timeInSeconds, setTimeInSeconds] = useState(initialTimeInSeconds)
   const [active, setActive] = useState(false)
 
   const minutes = Math.floor(timeInSeconds / 60)

@@ -19,7 +19,7 @@ export default function Home() {
         <div>
           <Profile />
           <CompletedChallenges />
-          <Countdown />
+          <Countdown initialTimeInSeconds={25 * 60} />
         </div>
         <div></div>
       </section>

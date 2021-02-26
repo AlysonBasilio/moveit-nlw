@@ -22,14 +22,17 @@ interface ChallengesContextData {
 
 interface ChallengesProviderProps {
   children: ReactNode
+  level: number
+  currentExperience: number
+  challengesCompleted: number
 }
 
 export const ChallengesContext = createContext({} as ChallengesContextData)
 
-export function ChallengesProvider({ children }: ChallengesProviderProps) {
-  const [level, setLevel] = useState(1)
-  const [currentExperience, setCurrentExperience] = useState(0)
-  const [challengesCompleted, setChallengesCompleted] = useState(0)
+export function ChallengesProvider({ children, level: initialLevel, currentExperience: initialCurrentExperience, challengesCompleted: initialChallengesCompleted }: ChallengesProviderProps) {
+  const [level, setLevel] = useState(initialLevel ?? 1)
+  const [currentExperience, setCurrentExperience] = useState(initialCurrentExperience ?? 0)
+  const [challengesCompleted, setChallengesCompleted] = useState(initialChallengesCompleted ?? 0)
   const [activeChallenge, setActiveChallenge] = useState(null)
 
   const experienceToNextLevel = Math.pow((level + 1) * 4, 2)

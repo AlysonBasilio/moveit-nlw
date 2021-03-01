@@ -2,9 +2,9 @@ import Head from 'next/head'
 import { GetServerSideProps } from 'next'
 
 import { ChallengeBox } from '../component/ChallengeBox'
-import { CompletedChallenges } from "../component/CompletedChallenges"
-import { Countdown } from "../component/Countdown"
-import { ExperienceBar } from "../component/ExperienceBar"
+import { CompletedChallenges } from '../component/CompletedChallenges'
+import { Countdown } from '../component/Countdown'
+import { ExperienceBar } from '../component/ExperienceBar'
 import { Profile } from '../component/Profile'
 import { CountdownProvider } from '../contexts/CountdownContext'
 

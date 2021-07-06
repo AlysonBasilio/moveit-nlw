@@ -58,5 +58,45 @@
     "type": "body",
     "description": "Em pé, gire a cintura o máximo que puder para a esquerda, segure por cinco segundos. Repita para a direita.",
     "amount": 90
+  },
+  {
+    "type": "body",
+    "description": "Faça 20 polichinelos",
+    "amount": 180
+  },
+  {
+    "type": "body",
+    "description": "Faça 1 flexão",
+    "amount": 200
+  },
+  {
+    "type": "body",
+    "description": "Faça 2 flexões",
+    "amount": 400
+  },
+  {
+    "type": "body",
+    "description": "Faça 10 abdominais",
+    "amount": 200
+  },
+  {
+    "type": "body",
+    "description": "Faça 10 agachamentos",
+    "amount": 200
+  },
+  {
+    "type": "body",
+    "description": "Faça 20 agachamentos",
+    "amount": 300
+  },
+  {
+    "type": "body",
+    "description": "Faça 30s de prancha",
+    "amount": 200
+  },
+  {
+    "type": "body",
+    "description": "Faça 15s de prancha",
+    "amount": 100
   }
 ]
